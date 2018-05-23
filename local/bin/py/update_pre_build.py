@@ -221,7 +221,7 @@ class PreBuild:
 
         # sync from integrations-core, download if we don't have it (public repo so no token needed)
         if not options.integrations:
-            self.download_from_repo('DataDog', 'integrations-core', 'master', integrations_globs)
+            self.download_from_repo('DataDog', 'integrations-core', 'greg/istio-tile', integrations_globs)
             self.options.integrations = '{0}{1}{2}'.format(self.extract_dir, 'integrations-core', sep)
 
         # sync from integrations-extras, download if we don't have it (public repo so no token needed)
