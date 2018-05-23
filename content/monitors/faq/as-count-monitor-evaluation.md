@@ -30,7 +30,7 @@ Suppose we wish to monitor an error rate, which we calculate as:
 
 Let’s take this query for the time frame between *11:00:00* and *11:05:00*:
 
-`min(last_5m): sum:requests.error{*}.as_count() / sum:requests.total{*}.as_count()`   
+`sum(last_5m): sum:requests.error{*}.as_count() / sum:requests.total{*}.as_count()`   
 
 For the 5 min timeframe there are 5 time series points (zeros excluded):
 
